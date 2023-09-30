@@ -101,6 +101,5 @@ public class Graph {
       }
     }
     System.out.println(s + "\n--------------------------------\n");
-    //new GraphVisualization(vertices, adjStrct);
   }
 }
