@@ -19,15 +19,7 @@ public class Coloring {
 
   // verifica se eh seguro colocar a cor no vertice com posicao (row, col)
   private boolean isSafe(Vertice[][] matrix, int row, int col, int color) {
-    //se a cor for a mesma definida no inicio
-    if (initialGame[row][col] == color) return true;
-    //se for diferente de zero e nao for a mesma cor
-    if (
-      initialGame[row][col] != 0 && initialGame[row][col] != color
-    ) return false;
-
-    Vertice v1 = matrix[row][col];
-    //testa se algum vizinho de v1 tem a cor testada
+    //testa se algum vizinho de v1 tem a cor passada como argumento
     for (Vertice v2 : adjStrct.get(v1.getName() - 1)) {
       if (v2.getValue() == color) return false;
     }
