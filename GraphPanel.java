@@ -64,7 +64,7 @@ public class GraphPanel extends JPanel {
     }
 
     public Dimension getPreferredSize() {
-        return new Dimension(500,500);
+        return new Dimension(430,430);
     }
 
     public void paintComponent(Graphics g) {
