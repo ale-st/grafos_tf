@@ -94,13 +94,7 @@ public class Sudoku extends Graph {
       }
     }
   }
-
-  public int[][] getInitialGame() {
-    return initialGame;
-  }
-
   public Vertice[][] getVerticesMatrix() {
     return mtrx;
   }
-
 }
