@@ -26,7 +26,7 @@ public class Sudoku extends Graph {
     createVertices();
     setGroups();
     addEdges();
-    new Coloring2(this, time); //faz o algoritmo funcionar neste grafo
+    new Coloring(this, time); //faz o algoritmo funcionar neste grafo
     showGraph();
   }
 
