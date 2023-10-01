@@ -1,14 +1,14 @@
 import java.awt.Color;
 import java.util.List;
 
-public class Coloring2 {
+public class Coloring {
 
   private Sudoku g;
   private Vertice[][] mtrx;
   private List<List<Vertice>> adjStrct;
   private int time;
 
-  public Coloring2(Sudoku g, int time) {
+  public Coloring(Sudoku g, int time) {
     this.g = g;
     mtrx = g.getVerticesMatrix();
     adjStrct = g.getAdjStrct();
