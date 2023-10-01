@@ -21,14 +21,13 @@ public class Sudoku extends Graph {
     { 255, 0, 0 },
   }; //RGB das cores para GUI
 
-  public Sudoku(int[][] initialGame) {
+  public Sudoku(int[][] initialGame, int time) {
     this.initialGame = initialGame;
     createVertices();
     setGroups();
     addEdges();
-    new Coloring(this); //faz o algoritmo funcionar neste grafo
+    new Coloring2(this, time); //faz o algoritmo funcionar neste grafo
     showGraph();
-  
   }
 
   //cria os vertices e os posiciona na matriz de acordo com os valores iniciais (zero se nao foi dado nenhum)
@@ -40,8 +39,8 @@ public class Sudoku extends Graph {
         x = ((j + 1) * offset);
         y = ((i + 1) * offset);
 
-        addVertice(count, initialGame[i][j], i + 1, j + 1, x, y);
-        mtrx[i][j] = vertices.get(vertices.size() - 1);
+        addVertice(count, initialGame[i][j], i + 1, j + 1, x, y); //vertice eh adicionado ao grafo
+        mtrx[i][j] = vertices.get(vertices.size() - 1); //vertice eh adicionado a matriz
         count++;
       }
     }
@@ -94,6 +93,7 @@ public class Sudoku extends Graph {
       }
     }
   }
+
   public Vertice[][] getVerticesMatrix() {
     return mtrx;
   }
