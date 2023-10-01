@@ -1,13 +1,13 @@
 import java.awt.Color;
 import java.util.List;
 
-public class Coloring2 {
+public class Coloring {
 
   private Sudoku g;
   private Vertice[][] mtrx;
   private List<List<Vertice>> adjStrct;
 
-  public Coloring2(Sudoku g) {
+  public Coloring(Sudoku g) {
     this.g = g;
     mtrx = g.getVerticesMatrix();
     adjStrct = g.getAdjStrct();
